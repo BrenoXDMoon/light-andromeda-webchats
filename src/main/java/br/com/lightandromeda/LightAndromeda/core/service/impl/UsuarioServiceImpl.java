@@ -31,7 +31,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario buscarUsuarioPorId(Long id) {
-        //TODO: Lançar exceção caso não encontre o usuário
-        return usuarioRepository.findById(id).orElseThrow();
+        //TODO: Criar classe de exceção para caso não encontre o usuário
+        return usuarioRepository.findById(id).orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
 }

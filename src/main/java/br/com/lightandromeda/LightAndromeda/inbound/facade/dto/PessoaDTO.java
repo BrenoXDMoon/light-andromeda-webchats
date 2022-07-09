@@ -1,16 +1,16 @@
-package br.com.lightandromeda.LightAndromeda.core.domain.entity;
+package br.com.lightandromeda.LightAndromeda.inbound.facade.dto;
 
-import lombok.Data;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.time.LocalDate;
 
-@Data
-public class Pessoa extends DomainEntity {
+public class PessoaDTO {
 
     private String nome;
 
+    @CPF
     private String cpf;
 
     private String telefone;
